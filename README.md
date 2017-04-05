@@ -18,4 +18,81 @@ Execute this line in your app directory:
 npm install --save react-random
 ```
 
+Import component into your app:
+
+```javascript
+import Random from 'react-random';
+```
+
 ## Usage
+
+This is the simplest possible usage of the component:
+
+```javascript
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import Random from 'react-random';
+
+class DemoApp extends Component {
+  render () {
+    return <Random value='name.firstName' />;
+  }
+};
+
+render(
+  <DemoApp />,
+  document.getElementById('app')
+);
+
+```
+
+This simple piece of code will fetch `value` prop and divide it into `category = name` and `property = firstName` and according to
+[Faker.js](https://github.com/marak/Faker.js/) documentation it will render `faker.name.firstName()` value within `<span>...</span>` tag by default.
+
+You can also specify `tag`, `className` or `locale` of the component:
+
+```javascript
+class DemoApp extends Component {
+  render () {
+    return <Random value='name.lastName' tag='h1' className='cool-component__random-name' locale='ru' />;
+  }
+};
+```
+
+When it comes to random links you can handle them this way:
+
+```javascript
+class DemoApp extends Component {
+  render () {
+    return (
+      <Random value='image.cats' tag='a'>
+        Click Here!
+      </Random>
+    );
+  }
+};
+```
+
+and it evaluates to:
+
+```html
+  <a href="http://lorempixel.com/640/480/cats">Click Here!</a>
+```
+
+At the end you can display also random images:
+
+```javascript
+class DemoApp extends Component {
+  render () {
+    return (
+      <Random value='image.animals' tag='img' />
+    );
+  }
+};
+```
+
+and it gives you:
+
+```html
+  <img src="http://lorempixel.com/640/480/animals" />
+```
