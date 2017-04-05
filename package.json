@@ -43,6 +43,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.3",
     "eslint-plugin-standard": "^2.2.0",
+    "faker": "^4.1.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   }
