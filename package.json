@@ -1,0 +1,21 @@
+{
+  "name": "react-random",
+  "version": "0.1.0",
+  "description": "React component for rendering fake data.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel lib --presets babel-preset-es2015 --out-dir distribution",
+    "prepublish": "npm run build",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justynjozwiak/react-random.git"
+  },
+  "keywords": [],
+  "author": "Justyn Jóźwiak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justynjozwiak/react-random/issues"
+  },
+  "homepage": "https://github.com/justynjozwiak/react-random#readme"
+}
