@@ -8,6 +8,7 @@
     "prepublish": "npm run build",
     "example": "browserify -t babelify --debug example/index.js -o example/bundle.js",
     "test": "mocha --compilers js:babel-core/register \"test/**/*@(.js)\"",
+    "travis-coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
