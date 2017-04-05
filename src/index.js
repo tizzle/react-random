@@ -15,15 +15,20 @@ class Random extends Component {
       ? faker[category][property]()
       : faker[category]();
 
-    switch (tag) {
-      case 'a':
-        html = <a href={fakeData}>{children}</a>;
-        break;
-      case 'img':
-        html = <img src={fakeData} />;
-        break;
-      default:
-        html = <span>{fakeData}</span>;
+    if (tag === undefined) {
+      html = <span>{fakeData}</span>;
+    } else {
+      switch (tag) {
+        case 'a':
+          html = <a href={fakeData}>{children}</a>;
+          break;
+        case 'img':
+          html = <img src={fakeData} />;
+          break;
+        default:
+          const CustomTag = tag;
+          html = <CustomTag>{fakeData}</CustomTag>;
+      }
     }
 
     return html;
