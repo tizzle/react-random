@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/justynjozwiak/react-random/issues"
   },
-  "homepage": "https://github.com/justynjozwiak/react-random#readme"
+  "homepage": "https://github.com/justynjozwiak/react-random#readme",
+  "peerDependencies": {
+    "react": "^15.4.2"
+  },
 }
