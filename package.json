@@ -1,7 +1,7 @@
 {
   "name": "react-random",
   "version": "0.1.0",
-  "description": "React component for rendering fake data.",
+  "description": "React component for rendering random / fake data.",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --presets babel-preset-es2015 --out-dir lib",
