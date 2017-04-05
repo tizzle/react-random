@@ -6,6 +6,10 @@
 
 React component for rendering random / fake data.
 
+Often times we encounter the situation in our projects when we don't have any backend ready yet and we have to mock some random data in
+our templates. That's why I've decided to create a simple React wrapper around [Faker.js](https://github.com/marak/Faker.js/) library called
+`react-random` that solves our problem.
+
 ## Installation
 
 Execute this line in your app directory:
