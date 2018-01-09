@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import faker from 'faker';
 
 class Random extends Component {
@@ -36,12 +37,12 @@ class Random extends Component {
 };
 
 Random.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  tag: React.PropTypes.string,
-  locale: React.PropTypes.string,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
+  value: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  locale: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element
   ])
 };
 
