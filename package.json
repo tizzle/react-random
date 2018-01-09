@@ -4,7 +4,9 @@
   "description": "React component for rendering random / fake data.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src/ --out-dir lib/",
+    "build": "npm run build:babel | npm run build:umd",
+    "build:babel": "babel lib/ --out-dir dist/babel",
+    "build:umd": "webpack",
     "prepublish": "npm run build",
     "example": "browserify -t babelify --debug example/index.js -o example/bundle.js",
     "test": "mocha --compilers js:babel-core/register \"test/**/*@(.js)\"",
