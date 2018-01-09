@@ -6,7 +6,7 @@ module.exports = {
   entry: './lib/index.js',
   output: {
     path: path.resolve(__dirname, 'dist/umd'),
-    filename: 'react-random.min.js',
+    filename: 'index.js',
     libraryTarget: 'umd',
     library: 'react-random'
   },
